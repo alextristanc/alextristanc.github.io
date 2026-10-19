@@ -120,6 +120,7 @@ const tech = [
   ["JavaScript", "javascript/javascript-original.svg"],
   ["PHP", "php/php-original.svg"],  
   ["C", "c/c-original.svg"],
+  ["C++","cplusplus/cplusplus-original.svg"],
   
 ];
 
