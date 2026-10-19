@@ -51,7 +51,7 @@ const projects = [
     meta: "Impact Forge Hackathon 2026 · Team of 4 · August 2026",
     desc: "AI-powered clinical appeals system.",
     bullets: ["Contributed to frontend development (TypeScript/React) and to the project's technical documentation."],
-    stack: ["TypeScript", "React"],
+    stack: ["React","TypeScript","Vite","Tailwindcss","Python","Docker","AI",],
   },
   {
     name: "PíldHora",
@@ -100,21 +100,27 @@ const techIcons = {
   MySQL: dev("mysql/mysql-original.svg"),
   Bootstrap: dev("bootstrap/bootstrap-original.svg"),
   "Google reCAPTCHA": g("shield"),
+  // --- Nuevos íconos para AppealForge ---
+  Vite: dev("vitejs/vitejs-original.svg"),
+  "Tailwindcss": dev("tailwindcss/tailwindcss-original.svg"),
+  FastAPI: dev("fastapi/fastapi-original.svg"),
+  Python: dev("python/python-original.svg"),
+  Docker: dev("docker/docker-original.svg"),
+  AI: "https://img.icons8.com/?size=100&id=POBc2SrrhhnF&format=png&color=000000",
+  
 };
 
 const tech = [
   ["Java", "java/java-original.svg"],
-  ["C", "c/c-original.svg"],
-  ["TypeScript", "typescript/typescript-original.svg"],
-  ["PHP", "php/php-original.svg"],
-  ["JavaScript", "javascript/javascript-original.svg"],
-  ["HTML5", "html5/html5-original.svg"],
-  ["CSS3", "css3/css3-original.svg"],
-  ["MySQL", "mysql/mysql-original.svg"],
-  ["PostgreSQL", "postgresql/postgresql-original.svg"],
   ["Supabase", "supabase/supabase-original.svg"],
   ["Tailwindcss", "tailwindcss/tailwindcss-original.svg"],
-  ["C++", "cplusplus/cplusplus-original.svg"],
+  ["Docker", "docker/docker-original.svg"],
+  ["PostgreSQL", "postgresql/postgresql-original.svg"],    
+  ["HTML5/CSS3", "html5/html5-original.svg"],
+  ["JavaScript", "javascript/javascript-original.svg"],
+  ["PHP", "php/php-original.svg"],  
+  ["C", "c/c-original.svg"],
+  
 ];
 
 const skills = [
