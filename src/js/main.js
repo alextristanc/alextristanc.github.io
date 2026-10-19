@@ -283,12 +283,23 @@ $("certs").innerHTML = certs
 
 // ---- Languages ----
 $("langs").innerHTML = langs
-  .map(
-    (l) => `
-  <span class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-panel py-2 pl-3 pr-4">
-    <img src="${g("lang")}" alt="" class="h-5 w-5" />${l}
-  </span>`
-  )
+  .map((l) => {
+    const isEs = l.toLowerCase().includes("spanish") || l.toLowerCase().includes("español");
+    const isEn = l.toLowerCase().includes("english") || l.toLowerCase().includes("inglés");
+
+    // México: Gradiente Verde / Blanco / Rojo (Fondo claro con texto oscuro para máximo contraste)
+    const esClass = "border-emerald-400 bg-gradient-to-r from-emerald-200 via-stone-100 to-rose-200 text-slate-900 font-medium shadow-sm hover:scale-105";
+
+    // USA / UK: Gradiente Azul / Blanco / Rojo (Fondo claro con texto oscuro para máximo contraste)
+    const enClass = "border-blue-400 bg-gradient-to-r from-blue-200 via-slate-100 to-rose-200 text-slate-900 font-medium shadow-sm hover:scale-105";
+
+    const styleClass = isEs ? esClass : isEn ? enClass : "border-line bg-panel text-white";
+
+    return `
+  <span class="reveal inline-flex items-center gap-2 rounded-full border ${styleClass} px-4 py-2 transition-transform duration-200">
+    ${l}
+  </span>`;
+  })
   .join("");
 
 // ---- Footer ----
