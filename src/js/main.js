@@ -141,37 +141,40 @@ const certs = [
   {
     name: "Cisco Certified Support Technician IT Support (CCST)",
     issuer: "Cisco",
-    base: "linear-gradient(135deg, #102b3c 0%, #123f59 55%, #164d68 100%)",
-    accent: "#38c8ff",
-    tint: "#c4efff",
-    deco: "repeating-linear-gradient(90deg, rgba(56,200,255,.35) 0 2px, transparent 2px 14px)",
+    base: "linear-gradient(135deg, #e8f6fd 0%, #cdeafa 100%)",
+    accent: "#049fd9",
+    tint: "#055a7c",
+    deco: "repeating-linear-gradient(90deg, rgba(4,159,217,.28) 0 2px, transparent 2px 14px)",
+    badge: "5319e45b-7bec-4246-8a64-df3bfcb67d46",
   },
   {
     name: "Microsoft Office Specialist Excel Expert (Office 2019)",
     issuer: "Microsoft",
-    base: "linear-gradient(135deg, #102e22 0%, #164a35 55%, #1b5b40 100%)",
-    accent: "#40e69a",
-    tint: "#c0ffdf",
-    deco: "linear-gradient(rgba(64,230,154,.22) 1px, transparent 1px) 0 0/28px 28px, linear-gradient(90deg, rgba(64,230,154,.22) 1px, transparent 1px) 0 0/28px 28px",
+    base: "linear-gradient(135deg, #e9f8ef 0%, #cdeedb 100%)",
+    accent: "#21a366",
+    tint: "#0b5f3a",
+    deco: "linear-gradient(rgba(33,163,102,.28) 1px, transparent 1px) 0 0/24px 24px, linear-gradient(90deg, rgba(33,163,102,.28) 1px, transparent 1px) 0 0/24px 24px",
+    badge: "b810250b-1aa8-4b60-9539-a13c9faae5f1",
   },
   {
     name: "IT Specialist Java",
     issuer: "Certiport/Pearson VUE",
-    base: "linear-gradient(135deg, #202536 0%, #302b3d 55%, #413047 100%)",
-    accent: "#ffb547",
-    tint: "#ffe0a8",
-    deco: "radial-gradient(circle at 100% 0%, rgba(255,181,71,.32), transparent 60%)",
+    base: "linear-gradient(135deg, #fff3df 0%, #ffe0b0 100%)",
+    accent: "#f58a07",
+    tint: "#7a4200",
+    deco: "radial-gradient(circle at 100% 0%, rgba(245,138,7,.4), transparent 65%)",
+    badge: "2dc4acce-e246-40c3-a2dd-d2926725a89f",
   },
   {
     name: "IT Specialist HTML and CSS",
     issuer: "Certiport/Pearson VUE",
-    base: "linear-gradient(135deg, #242038 0%, #302748 55%, #303c65 100%)",
-    accent: "#ff865e",
-    tint: "#e1e5ff",
-    deco: "radial-gradient(circle at 100% 0%, rgba(255,105,70,.32), transparent 55%), radial-gradient(circle at 100% 100%, rgba(91,125,255,.38), transparent 55%)",
+    base: "linear-gradient(135deg, #eef0ff 0%, #dcdffc 100%)",
+    accent: "#4f46e5",
+    tint: "#312e81",
+    deco: "radial-gradient(circle at 100% 0%, rgba(227,79,38,.3), transparent 55%), radial-gradient(circle at 100% 100%, rgba(38,77,228,.3), transparent 55%)",
+    badge: "360e20dc-37ba-43e8-b09a-86b73d98e586",
   },
 ];
-
 const langs = ["Spanish (native)", "English (intermediate)"];
 
 // =====================================================================
@@ -253,14 +256,20 @@ const fade = "mask-image:linear-gradient(to left,#000,transparent 75%);-webkit-m
 $("certs").innerHTML = certs
   .map(
     (c) => `
-  <div class="reveal group relative overflow-hidden rounded-2xl p-6 pl-8 text-white shadow-xl shadow-black/40 ring-1 ring-white/15 transition duration-300 hover:-translate-y-1 hover:ring-white/35"
+  <div class="reveal group relative overflow-hidden rounded-2xl p-6 pl-8 text-ink shadow-xl shadow-black/50 ring-1 ring-black/10 transition duration-300 hover:-translate-y-1"
        style="background:${c.base}">
     <span class="absolute inset-y-0 left-0 w-1.5" style="background:${c.accent}"></span>
-    <span class="pointer-events-none absolute inset-0 opacity-60 transition duration-300 group-hover:opacity-90" style="background:${c.deco};${fade}"></span>
+    <span class="pointer-events-none absolute inset-0 opacity-80 transition duration-300 group-hover:opacity-100" style="background:${c.deco};${fade}"></span>
     <div class="relative">
       <p class="text-lg font-semibold leading-snug tracking-tight">${c.name}</p>
-      <span class="mt-4 inline-block rounded-full border bg-black/50 px-3 py-1 text-xs font-semibold tracking-wide"
-            style="color:${c.tint};border-color:${c.tint}70">${c.issuer}</span>
+      <div class="mt-4 flex flex-wrap items-center gap-2">
+        <span class="inline-block rounded-full px-3 py-1 text-xs font-semibold tracking-wide text-white"
+              style="background:${c.tint}">${c.issuer}</span>
+        <a href="https://www.credly.com/badges/${c.badge}/public_url" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1.5 rounded-full border border-ink/40 px-3 py-1 text-xs font-semibold text-ink transition hover:border-ink hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-ink">
+          Verify on Credly <span aria-hidden="true">↗</span>
+        </a>
+      </div>      
     </div>
   </div>`
   )
