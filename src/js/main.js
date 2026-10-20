@@ -55,9 +55,9 @@ const projects = [
   },
   {
     name: "PíldHora",
-    meta: "FEMECI San Luis Potosí · Team of 5 · October 2026",
-    desc: "Smart pill organizer.",
-    bullets: ["Helped develop an ESP32-C3-based pill organizer that notifies a web page and triggers an audible alert until the user confirms with a button press."],
+    meta: "Feria Mexicana de Ciencias e Ingenierías (FEMECI SLP) · Team of 5 · October 2026",
+    desc: "Smart Pill Organizer.",
+    bullets: ["Contributed to hardware integration and ESP32-C3 firmware development, implementing Wi-Fi communication, audible alerts, and physical-button input handling."],    
     stack: ["ESP32-C3 SuperMini", "C++", "Arduino", "Firebase", "JavaScript", "HTML5", "CSS3"],
   },
   {
@@ -75,11 +75,11 @@ const projects = [
     meta: "Team of 3 · May 2026",
     desc: "Web system to manage laboratory reservations.",
     bullets: [
-      "Designed the MySQL database schema to manage users and laboratory reservations.",
-      "Developed authentication and booking-coordination modules, adding Google reCAPTCHA to protect access.",
+      "Designed the MySQL database schema for user management and laboratory reservations.",
+      "Developed the complete Coordination module, including its frontend and CRUD functionality for managing system records.",
+      "Built the base frontend layout for the User, Teacher, and Lab Technician roles, and implemented input sanitization and Google reCAPTCHA across all four roles.",
     ],
-    stack: ["PHP", "MySQL", "Bootstrap", "Google reCAPTCHA"],
-    url: "https://github.com/alextristanc",
+    stack: ["PHP", "MySQL", "Bootstrap", "Google reCAPTCHA"],    
   },
 ];
 
