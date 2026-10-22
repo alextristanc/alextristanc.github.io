@@ -74,6 +74,8 @@ const projects = [
     name: "Laboratory reservation web system",
     meta: "Team of 3 · May 2026",
     desc: "Web system to manage laboratory reservations.",
+    demo: "https://github.com/alextristanc/Laboratory-reservation-web-system",
+    demoLabel: "View demo (video & photos)",
     bullets: [
       "Designed the MySQL database schema for user management and laboratory reservations.",
       "Developed the complete Coordination module, including its frontend and CRUD functionality for managing system records.",
@@ -209,11 +211,9 @@ const techChip = (name) => `
   </span>`;
 
 $("projects-list").innerHTML = projects
-  .map((p) => {
-    const tag = p.url ? "a" : "div";
-    const attrs = p.url ? `href="${p.url}" target="_blank" rel="noopener"` : "";
-    return `
-  <${tag} ${attrs} class="reveal group block rounded-3xl border border-line bg-panel p-8 transition hover:-translate-y-1 hover:border-accent">
+  .map(
+    (p) => `
+  <div class="reveal group block rounded-3xl border border-line bg-panel p-8 transition hover:-translate-y-1 hover:border-accent">
     <h3 class="text-2xl font-semibold">${p.name}</h3>
     <p class="mt-1 text-sm text-muted">${p.meta}</p>
     <p class="mt-4">${p.desc}</p>
@@ -221,8 +221,16 @@ $("projects-list").innerHTML = projects
     <div class="mt-6 flex flex-wrap gap-2 border-t border-line pt-5">
       ${p.stack.map(techChip).join("")}
     </div>
-  </${tag}>`;
-  })
+  ${
+    p.demo
+      ? `<a href="${p.demo}" target="_blank" rel="noopener"
+          class="mt-5 inline-flex items-center gap-1.5 rounded-full border border-accent/60 px-4 py-2 text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink focus-visible:ring-2 focus-visible:ring-accent">
+          ${p.demoLabel || "View demo"} <span aria-hidden="true">↗</span>
+        </a>`
+      : ""
+  }
+  </div>`
+  )
   .join("");
 
 // ---- Skills ----
