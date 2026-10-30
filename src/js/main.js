@@ -64,6 +64,8 @@ const projects = [
     name: "StudyFitness",
     meta: "Team of 3 · May 2026",
     desc: "Educational health and exercise app.",
+    demo: "https://github.com/alextristanc/StudyFitness",
+    demoLabel: "View demo (video & photos)",
     bullets: [
       "Implemented role lookup in PostgreSQL/Supabase and session redirection for user and administrator profiles.",
       "Developed a maze game and answer-selection mechanics with scoring, timer and result persistence via JDBC.",
