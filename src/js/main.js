@@ -57,7 +57,9 @@ const projects = [
     name: "PíldHora",
     meta: "Feria Mexicana de Ciencias e Ingenierías (FEMECI SLP) · Team of 5 · October 2026",
     desc: "Smart Pill Organizer.",
-    bullets: ["Contributed to hardware integration and ESP32-C3 firmware development, implementing Wi-Fi communication, audible alerts, and physical-button input handling."],    
+    bullets: ["Assembled and soldered electronic components for an ESP32-C3 mini-based IoT prototype.",
+              "Installed and integrated hardware components into the device circuit.",
+              "Configured Wi-Fi connectivity and supported hardware integration with the existing software."],    
     stack: ["ESP32-C3 SuperMini", "C++", "Arduino", "Firebase", "JavaScript", "HTML5", "CSS3"],
   },
   {
