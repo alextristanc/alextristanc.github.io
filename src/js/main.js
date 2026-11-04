@@ -74,7 +74,7 @@ const projects = [
   },
   {
     name: "Laboratory reservation web system",
-    meta: "Team of 3 · May 2026",
+    meta: "Team of 3 · Nov 2025",
     desc: "Web system to manage laboratory reservations.",
     demo: "https://github.com/alextristanc/Laboratory-reservation-web-system",
     demoLabel: "View demo (video & photos)",
